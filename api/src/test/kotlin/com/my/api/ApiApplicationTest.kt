@@ -1,4 +1,4 @@
-package com.my.common
+package com.my.api
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
@@ -7,7 +7,6 @@ import org.springframework.boot.test.context.SpringBootTest
 class ApiApplicationTest {
 
 	@Test
-	fun contextLoads() {
-	}
+	fun contextLoads() {}
 
 }
