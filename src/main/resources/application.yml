@@ -21,7 +21,7 @@ spring:
 auth:
   white-list:
     - /swagger-ui/**
-#    - /v1/health
+    - /v1/health
     - /v1/auth/**
     - /v2/api-docs
     - /configuration/**
