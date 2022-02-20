@@ -20,13 +20,11 @@ internal class HealthCheckControllerTest {
 
     @Test
     fun healthCheck() {
-
         val token = JwtUtil.generateToken("test1", listOf(GrantedAuthority{"SYS_ADMIN"}))
-
         val uri = "/v1/health"
         mockMvc.perform(MockMvcRequestBuilders.get(uri)
             .contentType(MediaType.APPLICATION_JSON)
-            .header("Authorization" , "")
+            .header("Authorization" , "Bearer $token")
             .accept(MediaType.APPLICATION_JSON))
         .andExpect(MockMvcResultMatchers.status().isOk)
         .andDo(MockMvcResultHandlers.print())
