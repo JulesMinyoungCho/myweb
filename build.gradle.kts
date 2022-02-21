@@ -64,8 +64,10 @@ dependencies {
     kapt("jakarta.annotation:jakarta.annotation-api")
     kapt("jakarta.persistence:jakarta.persistence-api")
     kapt("org.springframework.boot:spring-boot-configuration-processor")
-    implementation("com.querydsl:querydsl-jpa")
+    implementation("com.querydsl:querydsl-jpa:5.0.0")
     kapt("com.querydsl:querydsl-apt::jpa")
+    // H2 DB
+    runtimeOnly("com.h2database:h2")
 
 }
 tasks.withType<KotlinCompile> {

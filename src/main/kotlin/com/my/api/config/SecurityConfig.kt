@@ -15,7 +15,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableWebSecurity
 @ConfigurationProperties(prefix = "auth")
 class SecurityConfig(
-    private val whiteList: List<String> = listOf(),
+    var whiteList: List<String> = listOf(),
 ) : WebSecurityConfigurerAdapter(){
 
     @Autowired private lateinit var userDetailsService: JwtUserDetailsService
